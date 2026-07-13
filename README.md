@@ -18,6 +18,12 @@
 # Example C++
 
 ``` C++
+    #include <algorithm>
+    #include <iostream>
+    #include <string>
+    #include <stdint.h>
+    #include <cstring>
+	#include "obxrac32b64.hpp"
 	std::cout << "obxrac32b64 cryptor\n";
 	std::cout << "e - encode\n";
     std::cout << "d - decode\n";
