@@ -1,0 +1,25 @@
+﻿Сборка начата 13.07.2026 23:08:52.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\obxrac32b64.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\vs26st\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /permissive- /Fo"obxrac32b64\x64\Release\\" /Fd"obxrac32b64\x64\Release\vc145.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt obxrac32b64.cpp
+         obxrac32b64.cpp
+     1>C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\obxrac32b64.cpp(73,26): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+       Link:
+         D:\vs26st\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\x64\Release\obxrac32b64.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:D:\vs26st\VC\Tools\MSVC\14.51.36231\Include\Manifest\segmentheap.manifest /DEBUG /PDB:"C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\x64\Release\obxrac32b64.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"obxrac32b64\x64\Release\obxrac32b64.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\x64\Release\obxrac32b64.lib" /MACHINE:X64 obxrac32b64\x64\Release\obxrac32b64.obj
+         Создание кода
+         Previous IPDB not found, fall back to full compilation.
+         All 185 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Создание кода завершено
+         obxrac32b64.vcxproj -> C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\x64\Release\obxrac32b64.exe
+     1>Сборка проекта "C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\obxrac32b64.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\obxrac32b64.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\Администратор\Desktop\projects\C++\obxrac32b64\obxrac32b64.cpp(73,26): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:02.51

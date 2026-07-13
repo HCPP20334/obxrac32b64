@@ -1,0 +1,1 @@
+clang++ -std=c++14 -O3 obxrac32b64.cpp -o ./obxrac32b64_linux
