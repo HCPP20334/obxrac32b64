@@ -24,6 +24,7 @@
     #include <stdint.h>
     #include <cstring>
 	#include "obxrac32b64.hpp"
+	int main(){
 	std::cout << "obxrac32b64 cryptor\n";
 	std::cout << "e - encode\n";
     std::cout << "d - decode\n";
@@ -42,6 +43,7 @@
 	std::getline(std::cin,s_data);
 	std::cout << obxrac32b64(dec,s_data,s_key) << "\n";
 	return 0;
+	}
 ```
 # Example HTML+JS
 
