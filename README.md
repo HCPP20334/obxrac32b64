@@ -15,6 +15,10 @@
 ``` C++
 <script src="obxrac32b64.js"></script>
 ``` 
+| python
+``` python
+import obxrac32b64
+```
 # Example C++
 
 ``` C++
