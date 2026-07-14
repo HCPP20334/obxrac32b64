@@ -17,7 +17,7 @@
 ``` 
 | python
 ``` python
-import obxrac32b64
+import obxrac32b64_lib
 ```
 # Example C++
 
@@ -51,7 +51,7 @@ import obxrac32b64
 ```
 # Example Python
 ``` python
-import obxrac32b64
+import obxrac32b64_lib
 
 def main():
     print("obxrac32b64 python build\n")
