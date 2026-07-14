@@ -51,6 +51,8 @@ import obxrac32b64
 ```
 # Example Python
 ``` python
+import obxrac32b64
+
 def main():
     print("obxrac32b64 python build\n")
     print("e - encode\nd - decode\n")  
