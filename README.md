@@ -45,6 +45,23 @@
 	return 0;
 	}
 ```
+# Example Python
+``` python
+def main():
+    print("obxrac32b64 python build\n")
+    print("e - encode\nd - decode\n")  
+    cmd = input()
+    dec = False if cmd == 'e' else True
+    print("text:")
+    text = input() 
+    print("secret key:")
+    key = input()
+    result = obxrac32b64(dec, text, key)
+    print("Result:", result)
+
+if __name__ == "__main__":
+    main()
+```
 # Example HTML+JS
 
 ``` html
