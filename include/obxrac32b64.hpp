@@ -6,7 +6,6 @@
 std::string xor32(std::string &sText,std::string sSecretKey){
     if (sSecretKey.empty()) return sText;
     std::string result;
-   // result.reserve(sText.size());
     for (size_t chunk = 0; chunk < sText.size(); ++chunk) {
         char c = sText[chunk] ^ sSecretKey[chunk % sSecretKey.size()];
         result.push_back(c);
@@ -25,11 +24,14 @@ std::string addc(int s, const std::string& i) {
     }
     return od;
 }
-std::string addce(const std::string& s) {
-    std::string r = s;
-    size_t pos = 0;
-    while ((pos = r.find("$$", pos)) != std::string::npos) {
-        r.erase(pos, 2);
+std::string addce(const std::string& s, int group_size = 5) {
+    std::string r;
+    r.reserve(s.size());
+    size_t i = 0;
+    while (i < s.size()) {
+        size_t take = std::min((size_t)group_size, s.size() - i);
+        r.append(s, i, take);
+        i += take + 2; 
     }
     return r;
 }
@@ -53,14 +55,8 @@ std::string base64_encode(const std::string& input) {
     return out;
 }
 std::string rvbstr(std::string _key) {
-	std::string hash = "";
-			//api_log("in:", _key, "mask:", this._mask);
-        //hash.resize(_key.size());
-	for (int i = 0; i < _key.length(); i++) {
-	    hash = hash + _key[(_key.length() - 1) - i];
-	//api_log("key:", _key[_key.length - i], i);
-	}
-	return hash;
+    std::reverse(_key.begin(), _key.end());
+    return _key;
 }
 std::string base64_decode(const std::string& input) {
     std::string out;
@@ -69,7 +65,7 @@ std::string base64_decode(const std::string& input) {
     for (unsigned char c : input) {
         if (c == '=') break;
         const char* p = strchr(BASE64_CHARS, c);
-        if (!p) continue;
+        if (!p)  continue;
         val = (val << 6) + (p - BASE64_CHARS);
         valb += 6;
         if (valb >= 0) {
@@ -86,13 +82,17 @@ std::string c = "";
 std::string obxrac32b64(bool isDecode,std::string m0,std::string m1) {
      if (isDecode) {
 	a = base64_decode((m0));
+    m0.clear();
 	b = xor32(a, m1);
+    a.clear();
 	b = addce(b);
 	b = rvbstr(b);
      } else {
 	a = rvbstr(m0);
+    m0.clear();
 	a = addc(5, a);
 	b = xor32(a, m1);
+    a.clear();
 	b = base64_encode(b);
      }
      return b;
